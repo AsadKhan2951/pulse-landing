@@ -1,4 +1,5 @@
-import { Rise, RevealHeading, RollButton } from './motion.jsx';
+import { Rise, RevealHeading } from './motion.jsx';
+import DemoButton from './DemoButton.jsx';
 import { PLANS } from '../content.js';
 
 export default function Pricing() {
@@ -14,7 +15,7 @@ export default function Pricing() {
             <span className="name">{p.name}{p.featured && <span className="badge">Most chosen</span>}</span>
             <p className="for">{p.for}</p>
             <div className="amt"><b>{p.price}</b><span>/ month</span></div>
-            <RollButton variant={p.featured ? 'solid' : 'line'} className="wide">{p.cta}</RollButton>
+            <DemoButton plan={p.name} variant={p.featured ? 'solid' : 'line'} className="wide">{p.cta}</DemoButton>
             <h4>What's included:</h4>
             <ul>{p.items.map((it) => <li key={it}>{it}</li>)}</ul>
           </Rise>

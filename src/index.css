@@ -318,3 +318,89 @@ svg.iso g.ln:nth-of-type(3n) line{animation-duration:4.1s}
 .stats-head{padding:72px var(--pad);margin:0}
 .cta-row > .rise{display:inline-flex}
 .brains + .art, .rise > .art{margin-inline:auto}
+
+/* ---------- demo request form ---------- */
+.modal-backdrop{position:fixed;inset:0;z-index:200;background:rgba(20,20,20,.38);backdrop-filter:blur(6px);display:flex;align-items:flex-start;justify-content:center;
+  padding:max(24px,env(safe-area-inset-top,0px)) 16px 24px;overflow-y:auto;animation:fadein .25s ease}
+.modal{position:relative;width:100%;max-width:680px;margin-block:auto;background:var(--card);border:1px solid var(--line);border-radius:8px;
+  box-shadow:0 40px 90px -30px rgba(20,20,20,.35);animation:modalin .5s cubic-bezier(.16,1,.3,1)}
+@keyframes fadein{from{opacity:0}}
+@keyframes modalin{from{opacity:0;transform:translateY(24px) scale(.98)}}
+.modal-x{position:absolute;top:16px;right:16px;width:40px;height:40px;border-radius:6px;border:1px solid var(--line);display:grid;place-items:center;background:var(--card)}
+.modal-x i,.modal-x i::after{display:block;width:16px;height:1.6px;background:var(--ink);transform:rotate(45deg)}
+.modal-x i::after{content:"";transform:rotate(90deg)}
+.modal-x:hover{border-color:var(--ink)}
+.modal-head{padding:36px 40px 26px;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:12px}
+.modal-head h2,.modal-done h2{font-size:clamp(26px,3.4vw,34px);padding-right:44px}
+.modal .lede{font-size:16px}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:18px 20px;padding:28px 40px}
+.field{display:flex;flex-direction:column;gap:7px;min-width:0;border:0;padding:0;margin:0}
+.field.wide{grid-column:1/-1}
+.field > span,.field legend{font-size:13px;font-weight:500;color:var(--ink-2);padding:0}
+.field legend{margin-bottom:8px}
+.field input,.field select,.field textarea{font:inherit;font-size:15px;color:var(--ink);background:var(--paper);border:1px solid var(--line-2);border-radius:5px;padding:11px 12px;width:100%;
+  transition:border-color .2s ease,box-shadow .2s ease}
+.field textarea{resize:vertical;min-height:84px}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(253,75,30,.14)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-size:14px;padding:7px 12px;border:1px solid var(--line-2);border-radius:999px;background:var(--card);color:var(--ink-2);transition:all .2s ease}
+.chip:hover{border-color:var(--ink)}
+.chip.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.form-error{margin:0 40px 6px;padding:12px 14px;border:1px solid #F3B9A8;background:#FFF3EF;border-radius:5px;font-size:14px;color:#8A2A10}
+.modal-foot{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:20px 40px 32px;border-top:1px solid var(--line)}
+.fine{font-size:13px;color:var(--ink-3);max-width:38ch}
+.fine a{text-decoration:underline}
+.modal-foot .btn[disabled]{opacity:.6;cursor:progress}
+.modal-done{padding:56px 40px 48px;display:flex;flex-direction:column;align-items:flex-start;gap:16px}
+.done-mark{width:52px;height:52px;border-radius:50%;background:var(--accent);position:relative}
+.done-mark::after{content:"";position:absolute;left:19px;top:13px;width:11px;height:20px;border:solid #fff;border-width:0 3px 3px 0;transform:rotate(45deg)}
+@media (max-width:620px){
+  .modal-head,.fields,.modal-foot,.modal-done{padding-inline:22px}
+  .form-error{margin-inline:22px}
+  .fields{grid-template-columns:1fr}
+  .modal-foot{flex-direction:column;align-items:stretch}
+  .modal-foot .btn{width:100%}
+}
+
+/* ---------- policy pages ---------- */
+.legal-hero{display:flex;flex-direction:column;gap:18px;padding-block:88px 64px}
+.legal-hero h1{font-size:clamp(40px,6vw,72px)}
+.updated{font-size:14px;color:var(--ink-3)}
+.legal-links{display:flex;gap:20px;flex-wrap:wrap}
+.legal-links a:hover{color:var(--ink)}
+.doc{display:grid;grid-template-columns:240px minmax(0,1fr);gap:64px;align-items:start}
+.doc:not(:has(.toc)){grid-template-columns:minmax(0,1fr)}
+.toc{position:sticky;top:110px}
+.toc-h{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);margin-bottom:12px}
+.toc ol{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;counter-reset:t}
+.toc li{counter-increment:t;font-size:14px}
+.toc li a{color:var(--ink-3);transition:color .2s}
+.toc li a::before{content:counter(t,decimal-leading-zero) "  ";color:var(--accent);font-variant-numeric:tabular-nums}
+.toc li a:hover{color:var(--ink)}
+.doc-body{max-width:72ch}
+.doc-body h2{font-size:clamp(22px,2.4vw,28px);margin:44px 0 14px;scroll-margin-top:100px}
+.doc-body h2:first-child{margin-top:0}
+.doc-body h3{font-size:18px;margin:24px 0 8px}
+.doc-body p,.doc-body li{font-size:16px;line-height:1.7;color:var(--ink-2)}
+.doc-body p + p{margin-top:12px}
+.doc-body ul{margin:10px 0 0;padding-left:20px;display:flex;flex-direction:column;gap:8px}
+.doc-body li::marker{color:var(--accent)}
+.doc-body a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:3px}
+.doc-body b{color:var(--ink);font-weight:600}
+.doc-body code{font-size:14px;background:var(--wash);padding:2px 6px;border-radius:4px}
+.prefs{border-top:1px solid var(--line)}
+.pref{display:flex;align-items:center;justify-content:space-between;gap:28px;padding:24px 0;border-bottom:1px solid var(--line)}
+.pref-text h3{margin:0 0 6px;font-size:20px}
+.pref-text p{font-size:15px;color:var(--ink-3);max-width:56ch}
+.switch{flex:none;width:52px;height:30px;border-radius:999px;background:var(--line-2);position:relative;transition:background .25s ease}
+.switch i{position:absolute;top:3px;left:3px;width:24px;height:24px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.2);transition:transform .3s cubic-bezier(.2,.8,.2,1)}
+.switch.on{background:var(--accent)}
+.switch.on i{transform:translateX(22px)}
+.switch:disabled{cursor:not-allowed;opacity:.55}
+.pref-actions{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:28px 0 8px}
+.saved{font-size:14px;color:var(--ink-2);margin-left:6px}
+@media (max-width:900px){
+  .doc{grid-template-columns:minmax(0,1fr);gap:36px}
+  .toc{position:static;border-bottom:1px solid var(--line);padding-bottom:24px}
+}

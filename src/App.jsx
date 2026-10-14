@@ -11,10 +11,11 @@ import Pricing from './components/Pricing.jsx';
 import Faq from './components/Faq.jsx';
 import Cta from './components/Cta.jsx';
 import Footer from './components/Footer.jsx';
+import { DemoProvider } from './context/demo.jsx';
 
 export default function App() {
   return (
-    <>
+    <DemoProvider>
       <Nav />
       <main className="frame" id="top">
         <Hero />
@@ -32,6 +33,6 @@ export default function App() {
         <Cta />
         <Footer />
       </main>
-    </>
+    </DemoProvider>
   );
 }

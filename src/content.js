@@ -2,6 +2,12 @@
 
 export const EMAIL = 'hello@wehearyou.studio';
 
+// Demo requests are emailed to this inbox through FormSubmit (formsubmit.co).
+// The first request sends an activation email to this address; click "Activate" once.
+// Afterwards FormSubmit offers a random alias you can paste here to hide the address.
+export const DEMO_INBOX = 'aamir@wehearyou.studio';
+export const DEMO_ENDPOINT = `https://formsubmit.co/ajax/${DEMO_INBOX}`;
+
 export const NAV_LINKS = [
   { href: '#brains', label: 'The brains' },
   { href: '#how', label: 'How it works' },

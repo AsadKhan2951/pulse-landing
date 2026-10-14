@@ -48,3 +48,12 @@ Breakpoints at 1020px and 760px (see the bottom of `index.css`). Below 760px the
 
 - "Book a demo" buttons point to `#cta`; the final CTA uses a `mailto:` link. Swap in your booking URL or form.
 - Brand colour is `--accent: #FD4B1E` in `index.css`. Fonts: Space Grotesk (display) and Inter (body) from Google Fonts in `index.html`.
+
+## Deploy to DigitalOcean (App Platform, static site)
+
+1. Push this folder to a GitHub repo (branch `main`).
+2. DigitalOcean → Apps → Create App → GitHub → pick the repo.
+3. It detects a static site. Build command `npm ci && npm run build`, output directory `dist`.
+4. Deploy. Every push to `main` redeploys automatically.
+
+Or from the terminal with `doctl`: edit the repo name in `.do/app.yaml`, then `doctl apps create --spec .do/app.yaml`.
