@@ -5,7 +5,7 @@ export default function Stats() {
   return (
     <section className="band flush">
       <div className="head center stats-head">
-        <RevealHeading className="h2" lines={['A rollout in numbers']} />
+        <RevealHeading className="h2" lines={['From demo to daily habit']} />
       </div>
       <div className="stats">
         {STATS.map((s, i) => (

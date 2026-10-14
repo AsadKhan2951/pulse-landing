@@ -17,8 +17,8 @@ export const NAV_LINKS = [
 ];
 
 export const HERO = {
-  title: 'Your business, finally explaining itself',
-  lede: 'Pulse connects to everything you run on, reads it the way five senior leaders would, and tells you what to do next.',
+  title: 'You run the company. Pulse reads it.',
+  lede: "Built for the seat where every decision lands. Pulse predicts what is coming, weighs the options and gives you a point of view. The call stays yours.",
 };
 
 export const SOURCES = [
@@ -27,24 +27,31 @@ export const SOURCES = [
 ];
 
 export const BRAINS = [
-  { name: 'CMO', role: 'Demand', text: 'Spend efficiency, channel mix and creative fatigue. Where the next rupee works hardest.' },
-  { name: 'CFO', role: 'Money', text: 'Margin after ads, cash position and receivables. Which growth is paying for itself.' },
-  { name: 'COO', role: 'Delivery', text: 'Stock cover, fulfilment and supplier lead times. The bottleneck forming two weeks out.' },
-  { name: 'Sales', role: 'Pipeline', text: 'Account movement and win rates. Which regions and reps are carrying the quarter.' },
-  { name: 'CHR', role: 'People', text: 'Headcount against output and attrition risk. Where the team is stretched before it breaks.' },
+  { name: 'CMO', role: 'Demand', text: 'Where the next rupee works hardest.' },
+  { name: 'CFO', role: 'Money', text: 'Which growth pays for itself. When cash gets tight.' },
+  { name: 'COO', role: 'Delivery', text: 'The stock-out forming two weeks out.' },
+  { name: 'Sales', role: 'Pipeline', text: "Who is carrying the quarter. Who is slipping." },
+  { name: 'CHR', role: 'People', text: 'Where the team is stretched, before it breaks.' },
 ];
 
 export const STEPS = [
-  { title: 'Connect', text: 'Point Pulse at the systems you already run on. It maps the fields itself, so a renamed column is a one-line fix.' },
-  { title: 'Read', text: 'Everything lands in one currency, over one window. Gaps between sources stay visible instead of being averaged away.' },
-  { title: 'Forecast', text: 'The measured trend is carried into the next period, with the range Pulse is confident in.' },
-  { title: 'Decide', text: 'When something moves against its own pattern, you get the reason behind it and the action that follows.' },
+  { title: 'Connect', text: 'Plug in the tools you already use. Live in a week.' },
+  { title: 'Analyze', text: 'Reads the numbers like a leader would, not like a report.' },
+  { title: 'Forecast', text: 'Predicts sales, cash and stock, with how sure it is.' },
+  { title: 'Suggest', text: 'A clear point of view on what to do, and why. Nothing moves without your rules.' },
+];
+
+// How far Pulse may act on its own. The CEO chooses; it can be changed any time.
+export const AUTONOMY = [
+  { level: 1, title: 'Ask me first', text: 'Every action waits for your yes.' },
+  { level: 2, title: 'Pre-approved', text: 'Low-severity moves run. The rest wait for you.' },
+  { level: 3, title: 'Autopilot', text: 'Pulse acts within your rules and reports back.' },
 ];
 
 export const CASES = [
-  { tag: 'Unify', title: 'Every source, one pulse', text: 'Dynamics 365, Shopify, Meta and Google land in one currency, over one window. The gaps between them stay visible.' },
-  { tag: 'Forecast', title: 'It sees what is coming', text: 'The measured trend is carried into the next period with a confidence range, so you plan against a number.' },
-  { tag: 'Decide', title: 'It tells you what to do', text: 'You get the reason behind a change and the action that follows. "Raise the cap, not the bid" beats a red arrow.' },
+  { tag: 'Monday, 8 am', title: 'The brief is waiting', text: 'Before your first meeting: sales, spend, margin and stock on one page.' },
+  { tag: 'Mid-week', title: 'Trouble, early', text: 'Pulse predicts the dip while you can still act.' },
+  { tag: 'Any moment', title: 'Ask. Get a point of view.', text: 'Why did margin fall, what happens next, and what Pulse would do.' },
 ];
 
 export const STATS = [
@@ -92,7 +99,7 @@ export const PLANS = [
 ];
 
 export const FAQ = [
-  { q: 'Is this just another dashboard?', a: 'No. A dashboard reports what happened and leaves the interpreting to you. Pulse reads the same numbers through five specialist brains, projects where they are heading, and tells you which one thing to act on.' },
+  { q: 'Is this a data consolidation tool?', a: 'No. Bringing your data together is where Pulse starts, not what it sells. It forecasts what happens next, assesses your options and gives you a point of view on what to do. You decide.' },
   { q: 'What can it connect to?', a: 'Anything you run on: ERP, online store, ad platforms, CRM, HR, warehouse, accounting, even a spreadsheet someone still maintains. Growth covers three tiers of connectivity and Scale is unlimited.' },
   { q: 'Do I need a technical team to set it up?', a: 'No. We connect two of your sources ourselves during the demo, and a full rollout is typically a week.' },
   { q: 'How safe is my data?', a: 'It is encrypted with AES-256 at rest and TLS 1.3 in transit, access is controlled by source and region, every action is written to an audit log, and it is hosted in the region you choose. It is never used to train models, never sold and never shared.' },

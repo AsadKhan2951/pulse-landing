@@ -8,7 +8,7 @@ export default function Footer({ base = '' }) {
         <div className="foot">
           <div>
             <Logo base={base} />
-            <p>The smart business brain. Every source, one reading, with five specialist brains telling you what to do about it.</p>
+            <p>The smart business brain. It reads the business. You lead it.</p>
           </div>
           <div>
             <h5>Product</h5>

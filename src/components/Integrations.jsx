@@ -9,7 +9,7 @@ export default function Integrations() {
       <div className="head center">
         <Rise as="p" className="eyebrow">Integrations</Rise>
         <RevealHeading className="h2" lines={['It plugs into what you already run on']} />
-        <Rise as="p" className="lede">ERP, commerce, ad platforms, CRM, HR and warehouse, plus the spreadsheet someone still keeps.</Rise>
+        <Rise as="p" className="lede">Your team keeps its tools. You get one reading of all of them.</Rise>
       </div>
       <Rise><Art className="art art-integ" svg={integ} /></Rise>
       <Marquee reverse />

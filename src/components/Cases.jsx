@@ -11,9 +11,9 @@ export default function Cases() {
   return (
     <section className="band" id="cases">
       <div className="head center">
-        <Rise as="p" className="eyebrow">What it does</Rise>
-        <RevealHeading className="h2" lines={['Three things a dashboard never could']} />
-        <Rise as="p" className="lede">Every chart you own can tell you what happened. These are the parts that change what you do on a Tuesday morning.</Rise>
+        <Rise as="p" className="eyebrow">Your week</Rise>
+        <RevealHeading className="h2" lines={['Less reporting. More deciding.']} />
+        <Rise as="p" className="lede">Not another dashboard to read. A point of view from someone who has already read everything.</Rise>
       </div>
       <div className="cases">
         {CASES.map((c, i) => (

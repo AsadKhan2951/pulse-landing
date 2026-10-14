@@ -90,7 +90,7 @@ export default function DemoModal({ open, plan, onClose }) {
             <div className="modal-head">
               <p className="eyebrow">Book a demo</p>
               <h2 id="demo-title">See Pulse on your own numbers</h2>
-              <p className="lede">Tell us a little about the business. We connect two of your sources and bring the five brains back with a live read.</p>
+              <p className="lede">Tell us a little about the business. We connect two of your sources and show you tomorrow's brief, built on your own numbers.</p>
             </div>
 
             <div className="fields">

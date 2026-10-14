@@ -15,8 +15,8 @@ export default function Brains() {
   return (
     <section className="band" id="brains">
       <div className="head">
-        <RevealHeading className="h2" lines={['One brain', 'five points of view']} />
-        <Rise as="p" className="lede">Pulse does not read your numbers as one pile. Five specialist agents each read them through their own discipline, then settle on a single view of the business.</Rise>
+        <RevealHeading className="h2" lines={['Five leaders', 'one brief']} />
+        <Rise as="p" className="lede">One specialist for every chair around your table. They weigh up the numbers and bring you one point of view. You get the answer, not the meeting.</Rise>
       </div>
       <Rise>
         <div className="brains" ref={ref} {...hover}>

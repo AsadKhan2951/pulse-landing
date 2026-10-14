@@ -404,3 +404,19 @@ svg.iso g.ln:nth-of-type(3n) line{animation-duration:4.1s}
   .doc{grid-template-columns:minmax(0,1fr);gap:36px}
   .toc{position:static;border-bottom:1px solid var(--line);padding-bottom:24px}
 }
+
+/* ---------- autonomy levels ---------- */
+.autonomy{border-top:1px solid var(--line);padding:44px var(--pad) 52px;display:grid;grid-template-columns:minmax(0,.9fr) repeat(3,minmax(0,1fr));gap:20px;align-items:stretch}
+.auto-head{display:flex;flex-direction:column;justify-content:center;gap:8px}
+.auto-head h3{font-size:26px}
+.auto-head p{font-size:15px;color:var(--ink-3)}
+.level{border:1px solid var(--line);border-radius:6px;padding:22px 24px;background:var(--card);display:flex;flex-direction:column;gap:10px;
+  transition:border-color .3s ease,transform .45s cubic-bezier(.2,.8,.2,1),box-shadow .45s ease}
+.level:hover{border-color:var(--accent);transform:translateY(-6px);box-shadow:0 22px 44px -24px rgba(253,75,30,.35)}
+.meter{display:flex;gap:4px}
+.meter i{width:24px;height:4px;border-radius:2px;background:var(--line-2)}
+.meter i.f{background:var(--accent)}
+.level h4{font-size:19px}
+.level p{font-size:14.5px;line-height:1.5;color:var(--ink-3)}
+@media (max-width:1020px){.autonomy{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.auto-head{grid-column:1/-1}}
+@media (max-width:760px){.autonomy{grid-template-columns:minmax(0,1fr);padding-block:36px 40px}}

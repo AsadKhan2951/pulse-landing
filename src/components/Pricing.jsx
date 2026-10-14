@@ -6,8 +6,8 @@ export default function Pricing() {
   return (
     <section className="band" id="pricing">
       <div className="head center">
-        <RevealHeading className="h2" lines={['Simple pricing per business']} />
-        <Rise as="p" className="lede">Not per seat, per query or per dashboard. One price for the whole business brain, and you can cancel whenever you like.</Rise>
+        <RevealHeading className="h2" lines={['One price for the whole business']} />
+        <Rise as="p" className="lede">One price for the whole company. No seats to count. Cancel any time.</Rise>
       </div>
       <div className="plans">
         {PLANS.map((p, i) => (

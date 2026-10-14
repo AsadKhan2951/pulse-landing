@@ -16,7 +16,7 @@ export default function Security() {
     <section className="band" id="security">
       <div className="head">
         <RevealHeading className="h2" lines={['Your numbers stay yours']} />
-        <Rise as="p" className="lede">Pulse reads the most sensitive thing a business has, and we treat it that way. None of it ever becomes training data.</Rise>
+        <Rise as="p" className="lede">What reaches your desk stays in the room. Encrypted, never used to train models, deleted when you say.</Rise>
       </div>
       <div className="split">
         <Rise>
